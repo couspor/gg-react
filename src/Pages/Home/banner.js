@@ -4,6 +4,7 @@ import { jsx, Box, Container, Button, Image } from "theme-ui";
 import { rgba } from "polished";
 import SectionHeading from "Components/section-heading";
 import illustration from "assets/images/banner-illustration.webp";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -12,16 +13,20 @@ const Banner = () => {
         <Box sx={styles.contentWrapper}>
           <SectionHeading
             sx={styles.heading}
-            title="Let us help you initialize your Journey of Parenthood"
-            description="GarbhaGudi has been awarded as Best IVF & Fertility Hospital in India "
+            title="Thousands of babies and millions of memories began with a visit to GarbhaGudi"
+            description="Starting new chapters for families since 2011"
           />
           <Box as="figure" sx={styles.illustration}>
             <Box sx={styles.buttonWrapper}>
               <Button variant="secondary">
-                <a href="https://garbhagudi.com/contact/">Get Started</a>
+                <Link to="/contact-us">Get Started</Link>
               </Button>
             </Box>
-            <Image src={illustration} alt="illustration" />
+            <Image
+              src={illustration}
+              alt="illustration"
+              style={{ marginTop: "30px" }}
+            />
           </Box>
         </Box>
       </Container>

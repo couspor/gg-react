@@ -1,24 +1,18 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, Box, Container, Button } from "theme-ui";
-import SectionHeading from "Components/section-heading";
-import illustration from "assets/images/subscribe-bg.webp";
-
-const SubscribeUs = () => {
+import React from "react";
+import { Box, Container, Heading, Button } from "theme-ui";
+import BgShape from "assets/images/cta-shape-1.svg";
+import btnShape from "assets/images/cta-btn-shape-1.svg";
+import { Link } from "react-router-dom";
+const CallToAction = () => {
   return (
-    <Box as="section" sx={styles.section} variant="section.subscribe">
-      <Container>
-        <Box sx={styles.contentWrapper}>
-          <Box as="form" sx={styles.subscribe}>
-            <SectionHeading
-              title="Let us take your dream forward"
-              description="Book an Appointment and get a free consultation"
-            />
-            <Box>
-              <Button variant="secondary">
-                <a href="https://garbhagudi.com/contact/">Register Now</a>
-              </Button>
-            </Box>
+    <Box sx={styles.wrapper}>
+      <Container sx={styles.container}>
+        <Box sx={styles.inner}>
+          <Heading as="h3">Let us take your dreams Forward.</Heading>
+          <Box sx={styles.btnWrapper}>
+            <Button sx={styles.btn}>
+              <Link to="/contact-us">BOOK A FREE CONSULTATION</Link>
+            </Button>
           </Box>
         </Box>
       </Container>
@@ -26,34 +20,76 @@ const SubscribeUs = () => {
   );
 };
 
-export default SubscribeUs;
+export default CallToAction;
 
 const styles = {
-  section: {
-    background: [
-      "none",
-      null,
-      null,
-      `#F8F0EA url(${illustration}) no-repeat center / cover`,
-    ],
-    pt: [8, null, null, null, 10],
-    pb: [8, null, null, 9, 11],
+  wrapper: {
+    padding: ["45px 30px 50px", null, null, "45px 50px", null, "45px 70px"],
+    mt: ["20px", null, null, "80px"],
   },
-  contentWrapper: {
-    backgroundColor: "transparent",
-    borderRadius: 15,
-    p: [null, null, null, "40px 110px 50px", "50px 50px", "40px"],
-    gap: "50px",
-    display: ["block", null, "grid", "block", "grid"],
+  inner: {
+    padding: ["45px 30px 50px", null, null, "45px 50px", null, "45px 70px"],
+    mt: [0, null, null, null, "-80px"],
+    position: "relative",
+    zIndex: "10",
+    backgroundColor: "secondary",
+    backgroundImage: ["none", null, null, null, null, `url(${BgShape})`],
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "60% center",
+    borderRadius: "10px",
+    display: "flex",
+    alignItems: "center",
+    textAlign: ["center", null, null, "left"],
+    flexDirection: ["column", null, null, "row"],
+    justifyContent: ["center", null, null, "space-between"],
+    h3: {
+      color: "#fff",
+      fontWeight: "bold",
+      fontSize: [5, null, 4, null, null, 6, 7],
+      lineHeight: [1.24, null, 1.53],
+      padding: ["0 15px", "0"],
+      marginBottom: ["50px", null, null, "0"],
+      br: {
+        display: ["none", null, null, "inherit"],
+      },
+    },
   },
-  subscribe: {
-    marginX: "auto",
-    button: {
-      mx: "35%",
+  btn: {
+    backgroundColor: "#fff",
+    color: "secondary",
+    borderRadius: "5px",
+    fontSize: [0, 1, null, null, null, null, "17px"],
+    fontWeight: "700",
+    letterSpacing: "0.1em",
+    fontFamily: "body",
+    padding: ["10px 24px", null, null, null, null, "15px 44px"],
+    position: "relative",
+    outline: "none",
+    webkitAppearance: "none",
+    "&:before, &:after": {
+      content: '""',
+      position: "absolute",
+      width: "73px",
+      height: "26px",
+      backgroundImage: `url(${btnShape})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      bottom: "calc(100% + 10px)",
+      left: "50%",
+      transform: "translateX(-50%)",
+    },
+    "&:after": {
+      bottom: "auto",
+      top: "calc(100% + 10px)",
+      transform: "translateX(-50%) rotate(180deg)",
+    },
+    "&:hover": {
+      backgroundColor: "black",
+      color: "#fff",
     },
     a: {
+      color: "secondary",
       textDecoration: "none",
-      color: "#fff",
     },
   },
 };

@@ -5,8 +5,8 @@ import Tabs, { TabPane } from "rc-tabs";
 import { RiCheckboxCircleFill } from "react-icons/ri";
 import { rgba } from "polished";
 import { LearnMore } from "Components/link";
-import tabImage2 from "assets/images/ivf@home.png";
-import tabImage1 from "assets/images/treatment.png";
+import tabImage2 from "assets/images/ivffromhome.webp";
+import tabImage1 from "assets/images/treatment.webp";
 
 const data = [
   {
@@ -35,32 +35,18 @@ const data = [
     moreLink: "#explore-more",
     image: tabImage2,
     list: [
-      "IVF @ Home",
+      "IVF from Home",
       "GarbhaGruha ",
       "Zero Cost EMI",
       "Paripoorna",
       "and more",
     ],
   },
-  // {
-  //   id: 3,
-  //   tabTitle: "Holistic Approach",
-  //   title: `We will turn your idea in the successful business model framework`,
-  //   description: `Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.`,
-  //   moreLink: "#explore-more",
-  //   image: tabImage1,
-  //   list: [
-  //     "Medical and vision",
-  //     "Life insurance",
-  //     "HSAs and FSAs",
-  //     "Commuter benefits",
-  //   ],
-  // },
 ];
 
 const WhyUs = () => {
   return (
-    <Box as="section" id="why-us" sx={styles.section}>
+    <Box as="section" sx={styles.section}>
       <Container>
         <Tabs sx={styles.tabs} animated={{ tabPane: true }}>
           {data?.map((item) => (

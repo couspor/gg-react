@@ -3,9 +3,9 @@
 import { jsx, Box, Container } from "theme-ui";
 import SectionHeading from "Components/section-heading";
 import Service from "Components/cards/service";
-import icon5 from "assets/images/icons/service4.png";
-import icon6 from "assets/images/icons/service7.png";
-import icon9 from "assets/images/icons/service9.png";
+import icon5 from "assets/images/icons/service4.webp";
+import icon6 from "assets/images/icons/service7.webp";
+import icon9 from "assets/images/icons/service9.webp";
 
 const data = [
   {
@@ -13,7 +13,7 @@ const data = [
     icon: icon5,
     moreLink: "#learn-more",
     title: "Free Second Opinion",
-    description: `Patients can meet our doctors and understand if the advised treatment is suitable for them.`,
+    description: `Patients can come and meet our doctors and understand if the advised treatment is the best thing for the patient couple.`,
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const data = [
 
 const OtherServices = () => {
   return (
-    <Box as="section" sx={styles.section}>
+    <Box as="section" sx={styles.section} id="why-us">
       <Container>
         <SectionHeading
           sx={styles.heading}

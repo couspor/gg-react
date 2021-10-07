@@ -4,24 +4,20 @@
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@react-hook/intersection-observer": "^3.1.1",
+    "framer-motion": "^4.1.17",
     "polished": "^4.0.5",
     "rc-drawer": "^4.2.1",
     "rc-tabs": "^11.7.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-ga": "^3.3.0",
     "react-icons": "^4.1.0",
-    "react-masonry-component": "^6.2.1",
+    "react-modal-video": "^1.2.8",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.1",
     "react-stickynode": "^3.0.4",
-    "swiper": "^6.4.5",
-    "theme-ui": "^0.3.5",
-    "web-vitals": "^1.0.1"
+    "theme-ui": "^0.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,9 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0"
-  }
+  "devDependencies": {}
 }
